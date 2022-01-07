@@ -1,0 +1,21 @@
+application: chatroom
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /wallpaper\.png
+  static_files: wallpaper.png
+  upload: wallpaper\.png
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
